@@ -1,0 +1,17 @@
+<mat-card class="login-container">
+  <mat-card-title class="login-container__title">
+    LOGIN
+  </mat-card-title>
+  <mat-card-content class="login-container__content">
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <mat-form-field class="email-input">
+        <input type="text" matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="password-input">
+        <input type="password" matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+      <button class="login-button" mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+<div id="particles-js"></div>
