@@ -1,0 +1,39 @@
+.navigation-container {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DD1F26;
+    padding: 12px;
+    box-sizing: border-box;
+    .email-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        &__value {
+            color: white;
+            margin-left: 12px;
+        }
+    }
+    .menu-container {
+        &__button {
+            margin-right: 24px;
+            &:last-child {
+                margin-right: unset!important;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                &.is-active {
+                    color: #FD787B;
+                }
+            }
+        }
+    }
+    .logout-container {
+        cursor: pointer;
+    }
+}

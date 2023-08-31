@@ -14,7 +14,7 @@ export const initParticlesJs = () => {
                         }
                     },
                     "color": {
-                        "value": "#b1c900"
+                        "value": "#DD1F26"
                     },
                     "shape": {
                         "type": "circle",

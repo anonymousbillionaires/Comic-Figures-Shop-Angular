@@ -1,0 +1,19 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { NavigationComponent } from 'src/app/components/navigation/navigation.component';
+import { MatButtonModule } from '@angular/material/button';
+
+@NgModule({
+  declarations: [
+    HomeComponent,
+    NavigationComponent
+  ],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    MatButtonModule
+  ]
+})
+export class HomeModule { }
