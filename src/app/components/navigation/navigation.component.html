@@ -1,0 +1,15 @@
+<div class="navigation-container">
+    <div class="email-container" *ngIf="email">
+        <img class="email-container__icon" src="../../../assets/images/icons/account-icon.png">
+        <div class="email-container__value">
+            {{ email }}
+        </div>
+    </div>
+    <div class="menu-container">
+        <button class="menu-container__button" mat-button><a [routerLink]="['/home/products']" [routerLinkActive]="'is-active'">Products</a></button>
+        <button class="menu-container__button" mat-button><a [routerLink]="['/home/add-product']" [routerLinkActive]="'is-active'">Add Product</a></button>
+    </div>
+    <div class="logout-container" (click)="logout()">
+        <img src="../../../assets/images/icons/logout-icon.png">
+    </div>
+</div>

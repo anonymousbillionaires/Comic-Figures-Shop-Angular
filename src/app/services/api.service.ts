@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,9 @@ export class ApiService {
 
   logout(): Observable<any> {
     return this.http.get('http://localhost:8080/api/auth/logout');
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('http://localhost:8080/api/products');
   }
 }

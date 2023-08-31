@@ -24,7 +24,11 @@ export class LoginComponent {
     this.apiService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
       next: data => {
         sessionStorage.setItem("token", data.access_token);
+        sessionStorage.setItem("email", data.email);
         this.router.navigate(['/home']);
+        this._snackBar.open('Login successfully!', 'Close', {
+          duration: 2500
+        });
       },
       error: error => {
         this.loginForm.reset();
